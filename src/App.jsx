@@ -1,5 +1,6 @@
 import React from 'react'
 import logoUrl from './assets/Waylo sin fondo.png'
+import logo from './assets/waylo-logo.webp'
 
 import ResetPassword from './pages/ResetPassword'
 import NoTokenPage from './pages/NoTokenPage'
@@ -13,7 +14,7 @@ function App() {
     <div className="container">
       <header className="header">
         <div className="logo-section">
-          <img src={logoUrl} alt="Waylo" className="logo" />
+          <img src={logo} alt="Waylo" className="brand-logo" loading="lazy" decoding="async" />
           <div className="brand">
             <h1>Waylo</h1>
             <p className="subtitle">Restablecimiento de contraseña</p>

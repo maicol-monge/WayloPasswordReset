@@ -1,6 +1,6 @@
 import React from 'react'
-import logoUrl from './assets/Waylo sin fondo.png'
-import logo from './assets/waylo-logo.webp'
+// Usa solo el PNG existente (Linux es case-sensitive y respeta espacios)
+import logo from './assets/Waylo sin fondo.png'
 
 import ResetPassword from './pages/ResetPassword'
 import NoTokenPage from './pages/NoTokenPage'
@@ -14,7 +14,15 @@ function App() {
     <div className="container">
       <header className="header">
         <div className="logo-section">
-          <img src={logo} alt="Waylo" className="brand-logo" loading="lazy" decoding="async" />
+          <img
+            src={logo}
+            alt="Waylo"
+            className="brand-logo"
+            loading="lazy"
+            decoding="async"
+            width={72}
+            height={72}
+          />
           <div className="brand">
             <h1>Waylo</h1>
             <p className="subtitle">Restablecimiento de contraseña</p>
@@ -25,7 +33,7 @@ function App() {
         {token ? <ResetPassword token={token} /> : <NoTokenPage />}
       </main>
       <footer className="footer">
-        <p>© 2025 Waylo. Todos los derechos reservados.</p>
+        <p>© {new Date().getFullYear()} Waylo. Todos los derechos reservados.</p>
       </footer>
     </div>
   )

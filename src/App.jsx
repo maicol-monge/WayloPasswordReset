@@ -1,5 +1,5 @@
 import React from 'react'
-import logoUrl from './assets/logo_no_bg.png'
+import logoUrl from './assets/Waylo sin fondo.png'
 
 import ResetPassword from './pages/ResetPassword'
 import NoTokenPage from './pages/NoTokenPage'

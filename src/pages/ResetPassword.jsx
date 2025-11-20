@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logoUrl from '../assets/logo_no_bg.png'
+import logoUrl from '../assets/Waylo sin fondo.png'
 import { resetPasswordRequest } from '../config'
 
 function ResetPassword({ token }) {

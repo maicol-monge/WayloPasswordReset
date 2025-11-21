@@ -7,8 +7,18 @@ import NoTokenPage from './pages/NoTokenPage'
 
 
 function App() {
-  const params = new URLSearchParams(window.location.search)
-  const token = params.get('token')
+  // Try both hash and query params for backwards compatibility
+  const hash = window.location.hash.substring(1) // Remove #
+  const hashParams = new URLSearchParams(hash)
+  const queryParams = new URLSearchParams(window.location.search)
+  
+  const token = hashParams.get('token') || queryParams.get('token')
+  
+  // Debug: log what we're getting
+  console.log('Current URL:', window.location.href)
+  console.log('Hash:', window.location.hash)
+  console.log('Search params:', window.location.search)
+  console.log('Token found:', token)
   
   return (
     <div className="container">

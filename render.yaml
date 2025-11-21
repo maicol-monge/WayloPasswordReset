@@ -1,13 +1,15 @@
 services:
   - type: web
-    name: ecopoints-frontend
+    name: waylo-password-reset
     env: static
-    repo: https://github.com/maicol-monge/EcoPointsPasswordReset
+    repo: https://github.com/maicol-monge/WayloPasswordReset
     branch: main
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     envVars:
       - key: VITE_API_BASE
-        value: https://ecopointsapi.onrender.com
-      - key: FRONTEND_BASE_URL
-        value: https://ecopoints-frontend.onrender.com
+        value: https://wayloapi.onrender.com
